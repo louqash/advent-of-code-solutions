@@ -1,6 +1,7 @@
 pub mod day1;
 pub mod day2;
 pub mod day3;
+pub mod day4;
 
 use std::fs;
 pub fn load_file(name: &str) -> String {
@@ -25,6 +26,11 @@ mod tests {
         println!("Day 3 Task:");
         println!("[part 1]: {}", crate::day3::solve_v1());
         println!("[part 2]: {}", crate::day3::solve_v2());
+        println!("");
+
+        println!("Day 4 Task:");
+        println!("[part 1]: {}", crate::day4::solve_v1());
+        println!("[part 2]: {}", crate::day4::solve_v2());
         println!("");
     }
 }
