@@ -7,7 +7,7 @@ fn count_trees_encountered(map: &Vec<&str>, mov: (usize, usize)) -> i32 {
         if map[pos.1].chars().nth(pos.0).unwrap() == '#' {
             count += 1;
         }
-        pos = ((pos.0 + mov.0)%width, pos.1 + mov.1);
+        pos = ((pos.0 + mov.0) % width, pos.1 + mov.1);
     }
 
     count
@@ -20,7 +20,6 @@ pub fn solve_v1() -> i32 {
 }
 
 pub fn solve_v2() -> i64 {
-
     let data: String = super::load_file("day3.txt");
     let map: Vec<&str> = data.split("\n").collect();
 

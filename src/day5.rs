@@ -1,5 +1,4 @@
 pub fn solve_v1() -> i32 {
-
     let data = super::load_file("day5.txt");
 
     let mut biggest_id = 0;
@@ -14,7 +13,8 @@ pub fn solve_v1() -> i32 {
                 row_lim.0 += (row_lim.1 - row_lim.0 + 1) / 2;
             } else if c == 'L' {
                 col_lim.1 -= (col_lim.1 - col_lim.0 + 1) / 2;
-            } else { // if c == 'R' {
+            } else {
+                // if c == 'R' {
                 col_lim.0 += (col_lim.1 - col_lim.0 + 1) / 2;
             }
         }
@@ -29,7 +29,6 @@ pub fn solve_v1() -> i32 {
 }
 
 pub fn solve_v2() -> i32 {
-
     let data = super::load_file("day5.txt");
 
     let mut seats: Vec<u8> = vec![0; 128];
@@ -44,7 +43,8 @@ pub fn solve_v2() -> i32 {
                 row_lim.0 += (row_lim.1 - row_lim.0 + 1) / 2;
             } else if c == 'L' {
                 col_lim.1 -= (col_lim.1 - col_lim.0 + 1) / 2;
-            } else { // if c == 'R' {
+            } else {
+                // if c == 'R' {
                 col_lim.0 += (col_lim.1 - col_lim.0 + 1) / 2;
             }
         }
@@ -52,9 +52,12 @@ pub fn solve_v2() -> i32 {
         *col = *col | 1 << col_lim.0;
     }
 
-    let my_seat = seats.into_iter().enumerate()
+    let my_seat = seats
+        .into_iter()
+        .enumerate()
         .filter(|(_, row)| (!(row >> 1) & 0x3f).count_ones() == 1)
-        .nth(0).unwrap();
+        .nth(0)
+        .unwrap();
 
     let col = 7 - (my_seat.1).leading_ones() as i32;
     let row = my_seat.0 as i32;

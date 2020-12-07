@@ -8,7 +8,7 @@ pub mod day6;
 use std::fs;
 pub fn load_file(name: &str) -> String {
     fs::read_to_string(String::from("test-vectors/") + name)
-            .expect("Try `cargo run` in the respository's root dir.")
+        .expect("Try `cargo run` in the respository's root dir.")
 }
 
 #[cfg(test)]

@@ -2,7 +2,7 @@ use std::collections::HashMap;
 
 pub fn solve_v1() -> i32 {
     let data = super::load_file("day6.txt");
-    let groups: Vec<&str> = data.split("\n\n").collect() ;
+    let groups: Vec<&str> = data.split("\n\n").collect();
 
     let mut count = 0;
     for group in groups {
@@ -22,7 +22,7 @@ pub fn solve_v1() -> i32 {
 
 pub fn solve_v2() -> i32 {
     let data = super::load_file("day6.txt");
-    let groups: Vec<&str> = data.split("\n\n").collect() ;
+    let groups: Vec<&str> = data.split("\n\n").collect();
 
     let mut count = 0;
     for group in groups {
