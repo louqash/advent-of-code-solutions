@@ -5,4 +5,5 @@
 [Day 4: Passport Processing](day4.md)\
 [Day 5: Binary Boarding](day5.md)\
 [Day 6: Custom Customs](day6.md)\
-[Day 7: Handy Haversacks](day7.md)
+[Day 7: Handy Haversacks](day7.md)\
+[Day 8: Handheld Halting](day8.md)\
