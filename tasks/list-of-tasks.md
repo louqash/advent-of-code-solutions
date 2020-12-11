@@ -7,3 +7,4 @@
 [Day 6: Custom Customs](day6.md)\
 [Day 7: Handy Haversacks](day7.md)\
 [Day 8: Handheld Halting](day8.md)\
+[Day 9: Encoding Error](day9.md)\

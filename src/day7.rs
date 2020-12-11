@@ -23,15 +23,15 @@ pub fn solve_v1() -> i32 {
         let mut contents: HashMap<&str, i32> = HashMap::new();
 
         for n in 0..inner_bags {
-            let offset = 4 + n*4;
-            let cap_str = &line[spaces[offset-1]+1..spaces[offset-1]+2];
+            let offset = 4 + n * 4;
+            let cap_str = &line[spaces[offset - 1] + 1..spaces[offset - 1] + 2];
             let capacity;
             if let Ok(n) = cap_str.parse::<i32>() {
                 capacity = n;
             } else {
                 continue;
             }
-            let inner_bag = &line[spaces[offset]+1..spaces[offset+2]];
+            let inner_bag = &line[spaces[offset] + 1..spaces[offset + 2]];
             if inner_bag == "shiny gold" {
                 bags_capable.insert(bag);
             }
@@ -75,15 +75,15 @@ pub fn solve_v2() -> i32 {
         let mut contents: HashMap<&str, i32> = HashMap::new();
 
         for n in 0..inner_bags {
-            let offset = 4 + n*4;
-            let cap_str = &line[spaces[offset-1]+1..spaces[offset-1]+2];
+            let offset = 4 + n * 4;
+            let cap_str = &line[spaces[offset - 1] + 1..spaces[offset - 1] + 2];
             let capacity;
             if let Ok(n) = cap_str.parse::<i32>() {
                 capacity = n;
             } else {
                 continue;
             }
-            let inner_bag = &line[spaces[offset]+1..spaces[offset+2]];
+            let inner_bag = &line[spaces[offset] + 1..spaces[offset + 2]];
             contents.insert(inner_bag, capacity);
         }
         bags.insert(bag, contents);
@@ -98,7 +98,7 @@ pub fn solve_v2() -> i32 {
             let (bag, mul) = list.pop_front().unwrap();
             for (inner_bag, count) in bags[bag].iter() {
                 sum += mul * count;
-                list.push_back((inner_bag, mul*count));
+                list.push_back((inner_bag, mul * count));
             }
         }
     }

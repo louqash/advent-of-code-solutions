@@ -40,7 +40,8 @@ pub fn solve_v2() -> i32 {
             changes.insert(pc);
             if inst == "nop" {
                 inst = "jmp";
-            } else { // if inst == "jmp" {
+            } else {
+                // if inst == "jmp" {
                 inst = "nop";
             }
         }
