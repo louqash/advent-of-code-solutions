@@ -8,3 +8,4 @@
 [Day 7: Handy Haversacks](day7.md)\
 [Day 8: Handheld Halting](day8.md)\
 [Day 9: Encoding Error](day9.md)\
+[Day 10: Adapter Array](day10.md)\

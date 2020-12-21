@@ -7,11 +7,12 @@ pub mod day6;
 pub mod day7;
 pub mod day8;
 pub mod day9;
+pub mod day10;
 
 use std::fs;
 pub fn load_file(name: &str) -> String {
     fs::read_to_string(String::from("test-vectors/") + name)
-        .expect("Try `cargo run` in the respository's root dir.")
+        .expect("Run cargo in the respository's root dir.")
 }
 
 #[cfg(test)]
@@ -61,6 +62,11 @@ mod tests {
         println!("Day 9 Task:");
         println!("[part 1]: {}", crate::day9::solve_v1());
         println!("[part 2]: {}", crate::day9::solve_v2());
+        println!("");
+
+        println!("Day 10 Task:");
+        println!("[part 1]: {}", crate::day10::solve_v1());
+        println!("[part 2]: {}", crate::day10::solve_v2());
         println!("");
     }
 }
